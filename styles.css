@@ -14,6 +14,8 @@ header {
   background: white;
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 100;
 }
 
 .navbar {
@@ -40,9 +42,14 @@ header {
   gap: 1rem;
 }
 
-.nav-links li {
-  cursor: pointer;
-  font-size: 0.95rem;
+.nav-item a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.nav-item.active a {
+  color: #64b500;
+  font-weight: bold;
 }
 
 .login-btn {
@@ -54,6 +61,13 @@ header {
   font-weight: bold;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
 .hero {
   position: relative;
   padding: 3rem 2rem;
@@ -111,19 +125,7 @@ header {
   right: 0;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-img {
-    max-width: 120px;
-  }
-}
+/* Features Section */
 .features {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -180,8 +182,44 @@ header {
   color: #555;
 }
 
-/* Responsif untuk mobile */
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #1c1c1c;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-img {
+    width: 160px;
+    height: 160px;
+  }
+
   .feature-cards {
     flex-direction: column;
     align-items: center;
