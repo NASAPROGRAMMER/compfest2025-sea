@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f0e5;
+  color: #1c1c1c;
+}
+
+header {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #64b500;
+}
+
+.logo span {
+  color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.login-btn {
+  background: none;
+  border: 1px solid #444;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  padding: 3rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-text h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.hero-text span {
+  color: #64b500;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.pricing-btn {
+  margin: 1rem 0;
+  background: #1c1c1c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.hero-img {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-img.left {
+  top: 0;
+  left: 0;
+}
+
+.hero-img.right {
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-img {
+    max-width: 120px;
+  }
+}
+.features {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.features-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #1c1c1c;
+}
+
+.features-header p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.feature-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 200px;
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+}
