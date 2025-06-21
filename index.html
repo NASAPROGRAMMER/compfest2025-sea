@@ -11,12 +11,12 @@
     <div class="navbar">
       <div class="logo">Sea <span>Catering</span></div>
       <nav>
-        <ul class="nav-links">
-          <li>Our Plans</li>
-          <li>About Us</li>
-          <li>Our Menus</li>
-          <li>Gift Cards</li>
-          <li>Sustainability</li>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-item active"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#menu-plans">Menu Plans</a></li>
+          <li class="nav-item"><a href="#contact">About Us</a></li>
+          <li class="nav-item"><a href="#">Subscription</a></li>
         </ul>
       </nav>
       <button class="login-btn">Log in</button>
@@ -27,37 +27,61 @@
     <img src="colaborative kitchen dapur bersama.png" alt="left food" class="hero-img left" />
     <img src="images.jpeg" alt="right food" class="hero-img right" />
     <div class="hero-text">
-      <h1>Nikmati hidup sehat bersama SEA Catering!<span>Pesan makanan sesuai selera dan kebutuhanmu, </span><br />dikirim langsung ke rumah, di mana pun kamu berada di Indonesia.</h1>
+      <h1>Nikmati hidup sehat bersama SEA Catering!
+        <span>Pesan makanan sesuai selera dan kebutuhanmu, </span><br />
+        dikirim langsung ke rumah, di mana pun kamu berada di Indonesia.</h1>
       <p>Healthy Meals, Anytime, Anywhere</p>
       <button class="pricing-btn">See Pricing & Plans</button>
       <p class="note">Flexible plans. No commitment. Skip or cancel anytime.</p>
     </div>
   </section>
-  <section class="features">
-  <div class="features-header">
-    <h2>A list of our key features or services </h2>
-    <p>Life’s full enough already. With SEA Catering, planning, shopping, and cooking feel simple and satisfying.</p>
-  </div>
-  <div class="feature-cards">
-    <div class="feature-card">
-      <img src="steakayam.jpg" alt="Fresh Ingredients">
-      <h3>Costumizes your own food</h3>
-      <p>Eat whatever food you want we can recommend.</p>
+
+  <section id ="menu-plans" class="features">
+    <div class="features-header">
+      <h2>A list of our key features or services </h2>
+      <p>Life’s full enough already. With SEA Catering, planning, shopping, and cooking feel simple and satisfying.</p>
     </div>
-    <div class="feature-card">
-      <img src="kontainer.jpg" alt="Cook with Confidence">
-      <h3>Delivery Food</h3>
-      <p>We will distribute the food with love.</p>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <img src="steakayam.jpg" alt="Fresh Ingredients">
+        <h3>Costumizes your own food</h3>
+        <p>Eat whatever food you want we can recommend.</p>
+      </div>
+      <div class="feature-card">
+        <img src="kontainer.jpg" alt="Cook with Confidence">
+        <h3>Delivery Food</h3>
+        <p>We will distribute the food with love.</p>
+      </div>
+      <div class="feature-card">
+        <img src="protein.jpg" alt="Healthy Made Easier">
+        <h3>Nutritional Information</h3>
+        <p>At least we will give 2000 calories and 50 proteins a day.</p>
+      </div>
     </div>
-    <div class="feature-card">
-      <img src="protein.jpg" alt="Healthy Made Easier">
-      <h3>Nutritional Information</h3>
-      <p>Atleast we will give 2000 calories and 50 proteins a day.</p>
-    </div>
-  </div>
-</section>
-<h1>Contact Details:</h1>
-<h3>Manager: Brian</h3>
-<h3>Phone Number: 08123456789</h3>
+  </section>
+
+  <section id ="contact">
+  <h1>Contact Details:</h1>
+  <h3>Manager: Brian</h3>
+  <h3>Phone Number: 08123456789</h3>
+  </section>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Optional: Highlight active nav item on click
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
