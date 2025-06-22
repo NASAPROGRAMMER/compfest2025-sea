@@ -4,18 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meal Plans - SEA Catering</title>
-  <link rel="stylesheet" href="mealplans.css" />
+  <link rel="stylesheet" href="styles2.css" />
 </head>
 <body>
   <header>
     <div class="navbar">
       <div class="logo">Sea <span>Catering</span></div>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="#">Menu Plans</a></li>
-          <li><a href="index.html#contact">About Us</a></li>
-          <li><a href="#">Subscription</a></li>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-item"><a href="index2.html">Home</a></li>
+          <li class="nav-item"><a href="mealplans.html">Menu Plans</a></li>
+          <li class="nav-item"><a href="index2.html#contact">About Us</a></li>
+          <li class="nav-item"><a href="#">Subscription</a></li>
+          <li class="nav-item"><a href="testimonial.html">Testimonial</a></li>
         </ul>
       </nav>
       <button class="login-btn">Log in</button>
@@ -77,6 +79,7 @@
   </div>
 
   <script>
+    // Modal Logic
     const buttons = document.querySelectorAll('.details-btn');
     const modals = document.querySelectorAll('.modal');
     const closeBtns = document.querySelectorAll('.close-btn');
@@ -99,6 +102,27 @@
         if (e.target === modal) modal.style.display = 'none';
       });
     };
+
+    // Active nav item based on current URL
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentPage = window.location.pathname.split("/").pop();
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage) {
+          link.parentElement.classList.add("active");
+        }
+      });
+    });
+
+    // Menu toggle for mobile
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
   </script>
 </body>
 </html>
