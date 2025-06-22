@@ -425,3 +425,69 @@ header {
     font-size: 1.2rem;
   }
 }
+/* === SUBSCRIPTION FORM === */
+.subscription-section {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.subscription-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.subscription-form label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.subscription-form input[type="text"],
+.subscription-form input[type="tel"],
+.subscription-form select,
+.subscription-form textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+.checkbox-group.days {
+  gap: 0.8rem;
+}
+
+.subscription-form button {
+  padding: 0.8rem 1rem;
+  background-color: #64b500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.total-price {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
