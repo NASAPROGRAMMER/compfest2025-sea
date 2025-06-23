@@ -62,14 +62,28 @@ header {
   font-weight: bold;
 }
 
-.login-btn {
-  background: none;
-  border: 1px solid #444;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+.auth-buttons {
+  display: flex;
+  gap: 10px;
 }
+
+.login-btn,
+.register-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00aaff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  background-color: #008fcc;
+}
+
 
 .menu-toggle {
   display: none;
@@ -490,4 +504,46 @@ header {
   margin-top: 2rem;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+/* ====== Auth Form Styling ====== */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.auth-form label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.auth-form button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  border: none;
+  background-color: #00b894;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #009975;
 }
