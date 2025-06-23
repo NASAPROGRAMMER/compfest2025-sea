@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - SEA Catering</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+  <header>
+    <div class="navbar">
+      <div class="logo">Sea <span>Catering</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="mealplans.html">Menu Plans</a></li>
+          <li class="nav-item"><a href="subscription.html">Subscription</a></li>
+          <li class="nav-item"><a href="testimonial.html">Testimonial</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<body>
+  <div class="form-container">
+    <h2>Login to SEA Catering</h2>
+    <form action="login.php" method="POST" class="auth-form">
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Password:</label>
+      <input type="password" name="password" required />
+
+      <button type="submit">Login</button>
+      <p class="switch-link">Don't have an account? <a href="register.html">Register here</a></p>
+    </form>
+  </div>
+</body>
+</html>
