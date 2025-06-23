@@ -1,10 +1,19 @@
+<?php
+session_start();
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.html");
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subscription - SEA Catering</title>
-  <link rel="stylesheet" href="styles2.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -17,7 +26,7 @@
           <li class="nav-item"><a href="mealplans.html">Menu Plans</a></li>
           <li class="nav-item"><a href="index.html#contact">About Us</a></li>
           <li class="nav-item active"><a href="subscription.html">Subscription</a></li>
-          <li class="nav-item"><a href="testimonial.html">Testimonial</a></li>
+          <li class="nav-item"><a href="testimonial.php">Testimonial</a></li>
         </ul>
       </nav>
       <button class="login-btn">Log in</button>
