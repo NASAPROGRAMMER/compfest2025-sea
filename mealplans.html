@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.html");
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +22,11 @@
       <nav>
         <div class="menu-toggle" id="mobile-menu">&#9776;</div>
         <ul class="nav-links" id="nav-links">
-          <li class="nav-item"><a href="index2.html">Home</a></li>
+          <li class="nav-item"><a href="index.html">Home</a></li>
           <li class="nav-item"><a href="mealplans.html">Menu Plans</a></li>
-          <li class="nav-item"><a href="index2.html#contact">About Us</a></li>
-          <li class="nav-item"><a href="#">Subscription</a></li>
-          <li class="nav-item"><a href="testimonial.html">Testimonial</a></li>
+          <li class="nav-item"><a href="index.html#contact">About Us</a></li>
+          <li class="nav-item"><a href="subscription.html">Subscription</a></li>
+          <li class="nav-item"><a href="testimonial.php">Testimonial</a></li>
         </ul>
       </nav>
       <button class="login-btn">Log in</button>
