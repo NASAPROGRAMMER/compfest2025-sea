@@ -1,4 +1,5 @@
 /* === RESET DAN DASAR === */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +19,11 @@ body {
   line-height: 1.6;
 }
 
-/* === HEADER DAN NAVBAR === */
+/* === HEADER & NAVBAR === */
 header {
   background: white;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 100;
 }
@@ -32,8 +33,29 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
+/* Struktur flex untuk 3 bagian utama */
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -44,11 +66,12 @@ header {
   color: #000;
 }
 
+/* Nav menu */
 .nav-links {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .nav-item a {
@@ -62,11 +85,8 @@ header {
   font-weight: bold;
 }
 
-.auth-buttons {
-  display: flex;
-  gap: 10px;
-}
-
+/* Tombol */
+.auth-buttons a,
 .login-btn,
 .register-btn {
   padding: 8px 16px;
@@ -82,6 +102,29 @@ header {
 .login-btn:hover,
 .register-btn:hover {
   background-color: #008fcc;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-center {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .navbar-right {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 
