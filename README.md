@@ -75,7 +75,7 @@ Sea-Catering/
 ```
 ## Instalasi Lokal
 
-    Clone repositori ini:
+
 
 ``` bash
 git clone https://github.com/username/sea-catering.git
