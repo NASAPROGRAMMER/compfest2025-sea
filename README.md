@@ -1,5 +1,7 @@
 # 🌊 Sea Catering
 
+🌐 **[Live Demo / Deployment Link](http://seacateringbyranggaxr.infy.uk/compfest2025-sea/)**
+
 **Sea Catering** adalah platform katering online sehat yang memungkinkan pengguna memesan makanan bergizi, disesuaikan dengan selera dan kebutuhan mereka. Dirancang untuk memberikan kemudahan, keamanan, dan fleksibilitas, Sea Catering menghadirkan solusi praktis untuk hidup sehat, di mana pun Anda berada.
 
 ![Screenshot](./Screenshot_2025-07-16_08_42_20.png)
